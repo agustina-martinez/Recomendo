@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyledHomeContainer, StyledHeaderContainer } from './Home.styles'
-import Navbar from '../../components/Navbar/Navbar.componente'
+import Navbar from '../../components/Navbar/Navbar.component'
 import CategoriesCard from '../../components/CategoriesCard/CategoriesCard.component'
 import TitlePage from '../../components/TitlePage/TitlePage.component'
 import Logo from '../../components/Logo/Logo.component'
