@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   StyledNavbarContainer,
   StyledUl,
@@ -32,7 +32,7 @@ const Navbar = ({ active = false}) => {
         </StyledLi>
       </StyledUl>
     </StyledNavbarContainer>
-  )
+  );
 }
 
 export default Navbar
