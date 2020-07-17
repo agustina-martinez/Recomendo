@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 
 export const StyledNavbarContainer = styled.div(({ theme }) => {
-  console.log(theme);
   return css`
     background-color: ${theme.colors.primary.base};
   `;
