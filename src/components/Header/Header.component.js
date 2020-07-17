@@ -5,8 +5,15 @@ import styled from 'styled-components';
 const HeaderStyle = styled.div`
     font-family: 'Inter', sans-serif;
     font-style: normal;
-    padding: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+`;
+
+const HeaderDiv = styled.div`
     width: 40%;
+    margin: 4.8rem;
 `;
 
 const HeaderH1 = styled.h1`
@@ -37,15 +44,29 @@ const HeaderP = styled.p`
     margin-bottom: 2rem;
 `;
 
+const HeaderImgPhone = styled.img`
+    height: 30%;
+    width: 17%;
+`;
+
+const HeaderImgPoints = styled.img`
+    height: 4rem;
+    margin-right: 6rem;
+`;
+
 const Header = () => {
 
     return (
         <HeaderStyle>
-            <HeaderH1><HeaderH1Span>R</HeaderH1Span>ecomendo</HeaderH1>
-            <HeaderH3>Encuentra o pregunta recomendaciones fácilmente todos los días</HeaderH3>
-            <HeaderP>Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet
-                sodales nisi, quis iaculis nulla.</HeaderP>
-            <Button/>
+            <HeaderDiv>
+                <HeaderH1><HeaderH1Span>R</HeaderH1Span>ecomendo</HeaderH1>
+                <HeaderH3>Encuentra o pregunta recomendaciones fácilmente todos los días</HeaderH3>
+                <HeaderP>Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet
+                    sodales nisi, quis iaculis nulla.</HeaderP>
+                <Button/>
+            </HeaderDiv>
+            <HeaderImgPhone src="/assets/phone.png"/>
+            <HeaderImgPoints src="/assets/points.png"/>
         </HeaderStyle>
     );
 }

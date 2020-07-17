@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import baseTheme from './themes/baseTheme';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.scss';
-import Onboard from './pages/onboard/Onboard.page';
+import Onboard from './pages/Onboard/Onboard.page';
 import Home from './pages/Home/Home.page';
 
 const App = () => {
