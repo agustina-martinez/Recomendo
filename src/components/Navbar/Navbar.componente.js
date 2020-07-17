@@ -3,16 +3,33 @@ import {
   StyledNavbarContainer,
   StyledUl,
   StyledLi,
+  StyledLink
 } from './Navbar.styles'
 
-const Navbar = () => {
+const Navbar = ({ active = false}) => {
   return (
     <StyledNavbarContainer>
       <StyledUl>
-        <StyledLi>Recomendados</StyledLi>
-        <StyledLi>Favoritos</StyledLi>
-        <StyledLi>Recomendar</StyledLi>
-        <StyledLi>Perfil</StyledLi>
+        <StyledLi active={true}>
+          <StyledLink>
+            Recomendados
+          </StyledLink>
+        </StyledLi>
+        <StyledLi active={active}>
+          <StyledLink>
+            Favoritos
+          </StyledLink>
+        </StyledLi>
+        <StyledLi active={active}>
+          <StyledLink>
+            Recomendar
+          </StyledLink>
+        </StyledLi>
+        <StyledLi active={active}>
+          <StyledLink>
+            Perfil
+          </StyledLink>
+        </StyledLi>
       </StyledUl>
     </StyledNavbarContainer>
   )

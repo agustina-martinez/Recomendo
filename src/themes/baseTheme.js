@@ -2,13 +2,13 @@ const colors = {
   black: '#000',
   primary: {
     base: '#5D58E9',
-    'dark-60': '#677B85',
-    'dark-80': '#4A5D66',
-    'light-40': '#A6B5BD',
-    'light-50': '#7D9099',
+    'dark-60': '#2521A0',
+    'dark-80': '#18214D',
+    'light-40': '#AAA7F2',
+    'light-50': '#ACAAED',
   },
   transparent: {
-    black: 'rgba(0, 0, 0, 16%)',
+    black: '#ACAAED',
   },
   warning: {
     base: '#EEBB0B',
@@ -41,7 +41,7 @@ const measurements = {
 
 const typography = {
   fonts: {
-    primary: 'Circular std',
+    primary: 'Inter',
   },
   rootFontSize: '14px',
   sizes: {
