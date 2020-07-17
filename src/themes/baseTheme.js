@@ -42,6 +42,7 @@ const measurements = {
 const typography = {
   fonts: {
     primary: 'Circular std',
+    secondary: 'Inter'
   },
   rootFontSize: '14px',
   sizes: {

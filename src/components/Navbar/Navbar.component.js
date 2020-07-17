@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import {
   StyledNavbarContainer,
   StyledUl,
   StyledLi,
-} from './Navbar.styles'
+} from './Navbar.styles';
 
 const Navbar = () => {
   return (
@@ -15,7 +15,7 @@ const Navbar = () => {
         <StyledLi>Perfil</StyledLi>
       </StyledUl>
     </StyledNavbarContainer>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
