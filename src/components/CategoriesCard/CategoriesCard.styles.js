@@ -4,7 +4,7 @@ export const CategoriesCardStyled = styled.div(({ theme }) => {
   return css`
     background-color: ${theme.colors.primary['light-40']};
     border-radius: 9px;
-    margin: 10px;
+    margin: 0 10px;
   `
 })
 
