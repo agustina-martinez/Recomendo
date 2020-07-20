@@ -5,7 +5,7 @@ export const StyledLogoContainer = styled.div(({ theme }) => {
     display: flex;
     font-family: ${theme.typography.fonts.primary};
     font-size: 27px;
-    line-weiht: 2.963px;
+    line-weight: 2.963px;
   `
 })
 

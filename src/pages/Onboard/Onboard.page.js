@@ -1,17 +1,20 @@
 import React from 'react';
 import Header from '../../components/Header/Header.component';
-import styled from 'styled-components';
-
-const OnboardStyle = styled.div`
-    background: #E5E5E5;
-    width: 100%;
-    height: 100vh;
-`;
+import {OnboardStyle, OnboardContainer, OnboardImgPhone, OnboardPoints, OnboardEachPoint} from './Onboard.styles';
 
 const Onboard = () => {
     return (
         <OnboardStyle>
             <Header/>
+            <OnboardContainer>
+                <OnboardImgPhone src="/assets/phone.png"/>
+                <OnboardPoints>
+                    <OnboardEachPoint/>
+                    <OnboardEachPoint/>
+                    <OnboardEachPoint/>
+                    <OnboardEachPoint/>
+                </OnboardPoints>
+            </OnboardContainer>
         </OnboardStyle>
     );
 }

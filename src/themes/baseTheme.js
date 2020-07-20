@@ -1,11 +1,17 @@
 const colors = {
   black: '#000',
+  points: {
+    blue: '#18214D',
+    grey: '#EFF2F6'
+  },
   primary: {
     base: '#5D58E9',
     'dark-60': '#2521A0',
     'dark-80': '#18214D',
+    dark3: '#3E4462',
     'light-40': '#AAA7F2',
     'light-50': '#ACAAED',
+    light3: '#345DEE'
   },
   transparent: {
     black: '#ACAAED',

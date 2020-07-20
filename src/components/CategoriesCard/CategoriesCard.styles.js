@@ -6,7 +6,7 @@ export const CategoriesCardStyled = styled.div(({ theme }) => {
     border-radius: 9px;
     margin: 10px;
   `
-})
+});
 
 export const CategoriesP = styled.ul(({ theme }) => {
   return `
@@ -16,4 +16,4 @@ export const CategoriesP = styled.ul(({ theme }) => {
     color: #FFF;
     padding: 5px 20px;
   ` 
-})
+});
