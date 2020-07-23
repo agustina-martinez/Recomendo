@@ -6,8 +6,8 @@ import {SignupStyle} from './Signup.styles';
 const SignUp = () => {
     return (
         <SignupStyle>
-            <VideoContainer/>
-            <Form/>
+            <VideoContainer margin='0 1.5rem'/>
+            <Form margin='0 1.5rem'/>
         </SignupStyle>
     );
 }

@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
 
 export const OnboardStyle = styled.div`
     background: #E5E5E5;
@@ -23,23 +23,3 @@ export const OnboardImgPhone = styled.img`
     width: 55%;
     padding: 0 2rem;
 `;
-
-export const OnboardPoints = styled.div`
-    width: 0.6rem;
-    height: 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items:center;
-    padding: 0 2rem;
-`;
-
-export const OnboardEachPoint = styled.span(({theme}) => {
-    return css`
-        width: 0.4rem;
-        height: 0.4rem;
-        border-radius: 10px;
-        cursor: pointer;
-        background-color: ${theme.colors.points.grey};
-    `;
-});

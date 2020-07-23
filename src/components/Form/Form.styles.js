@@ -18,7 +18,7 @@ export const TitlesFormContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    margin: 2rem;
+    margin: 1.8rem;
 `;
 
 export const TitleOne = styled.p(({theme}) => {
@@ -43,7 +43,7 @@ export const TitleTwo = styled.p(({theme}) => {
 export const InputContainer = styled.div`
     width: 80%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 `;
 
 export const NoInputContainer = styled.div`

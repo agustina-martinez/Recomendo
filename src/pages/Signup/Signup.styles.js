@@ -6,7 +6,7 @@ export const SignupStyle = styled.div(({theme}) => {
         height: 100vh;
         width: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
     `;
 });

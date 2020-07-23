@@ -5,7 +5,7 @@ export const StyledSearchInputContainer = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-`
+`;
 
 export const StyledInputSearch = styled.input(({ theme }) => {
   return css`
@@ -15,8 +15,8 @@ export const StyledInputSearch = styled.input(({ theme }) => {
     height: 40px;
     width: 268px;
     font-size: 24px;
-  `
-})
+  `;
+});
 
 export const StyledInputSearchIcon = styled(Search)(({ theme }) => {
   return css`
@@ -24,6 +24,5 @@ export const StyledInputSearchIcon = styled(Search)(({ theme }) => {
     right: 10px;
     color: ${theme.colors.secondary.base};
     cursor: pointer;
-  `
-})
-  
+  `;
+});

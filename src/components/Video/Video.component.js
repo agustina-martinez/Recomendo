@@ -1,9 +1,9 @@
 import React from 'react';
 import {VideoStyle} from './Video.styles';
 
-const VideoContainer = () => {
+const VideoContainer = ({margin}) => {
     return (
-        <VideoStyle/>
+        <VideoStyle style={{margin: margin}}/>
     );
 }
 

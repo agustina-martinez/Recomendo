@@ -1,21 +1,19 @@
-import styled, { css } from 'styled-components';
+import styled, {css} from 'styled-components';
 
-export const StyledNavbarContainer = styled.div(({ theme }) => {
-  return css`
-  `
-})
+export const StyledNavbarContainer = styled.div`
+`;
 
-export const StyledUl = styled.ul(({ theme }) => {
+export const StyledUl = styled.ul(({theme}) => {
   return `
     width: 550px;
     height: 40px;
     display: flex;
     justify-content: space-between;
     border-radius: 8px;
-    ` 
-  })
+    `;
+  });
   
-  export const StyledLi = styled.li(({ theme, active }) => {
+  export const StyledLi = styled.li(({theme, active}) => {
     return css`
     display: flex;
     justify-content: center;
@@ -33,8 +31,11 @@ export const StyledUl = styled.ul(({ theme }) => {
       border-top-right-radius: 8px;
       border-bottom-right-radius: 8px;
     }
-  `
-})
+    &:active{
+      background-color: ${theme.colors.primary['dark-60']};
+    }
+  `;
+});
 
 export const StyledLink = styled.p(({ theme }) => {
   return css`
@@ -42,5 +43,5 @@ export const StyledLink = styled.p(({ theme }) => {
     font-weight: 600;
     font-size: 16px;
     color: #fff;
-  `
-})
+  `;
+});

@@ -1,17 +1,17 @@
-import React from 'react'
+import React from 'react';
 import {
   StyledInputSearch,
   StyledSearchInputContainer,
   StyledInputSearchIcon
-} from './InputSearch.styles'
+} from './InputSearch.styles';
 
 const InputSearch = () => {
   return (
     <StyledSearchInputContainer>
-      <StyledInputSearch />
-      <StyledInputSearchIcon />
+      <StyledInputSearch/>
+      <StyledInputSearchIcon/>
     </StyledSearchInputContainer>
-  )
+  );
 }
 
-export default InputSearch
+export default InputSearch;

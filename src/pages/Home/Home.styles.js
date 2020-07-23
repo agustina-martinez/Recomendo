@@ -1,26 +1,6 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-export const StyledHomeContainer = styled.div(({ theme }) => {
-  return css`
-    max-width: 70%;
+export const StyledHomeContainer = styled.div`
+    max-width: 90%;
     margin: 0 auto;
-  `
-});
-
-export const StyledHeaderContainer = styled.ul(({ theme }) => {
-  return `
-
-    ` 
-  });
-  
-  export const StyledLi = styled.li(({ theme, active }) => {
-    return css`
-
-  `
-});
-
-export const StyledLink = styled.p(({ theme }) => {
-  return css`
-
-  `
-});
+`;

@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "category": "Business",
+        "img": "/assets/yoga.jpg",
+        "title": "Yoga relajante",
+        "person": "Ricky Matthews",
+        "score": "4.5"
+    },
+    {
+        "id": 2,
+        "category": "Financial",
+        "img": "",
+        "title": "Scooter Eléctrica",
+        "person": "Steven Brok",
+        "score": "5.0"
+    },
+    {
+        "id": 3,
+        "category": "Entertainment",
+        "img": "assets/yoga.jpg",
+        "title": "Trekking en monserrate",
+        "person": "Winifred Haynes",
+        "score": "4.5"
+    },
+    {
+        "id": 4,
+        "category": "Domicilios",
+        "img": "",
+        "title": "Droguería 24 horas",
+        "person": "Helena Marshall",
+        "score": "3.0"
+    },
+    {
+        "id": 5,
+        "category": "Servicios",
+        "img": "/assets/yoga.jpg",
+        "title": "Servicio de traslado al aeropuerto",
+        "person": "Winifred Haynes",
+        "score": "4.5"
+    },
+    {
+        "id": 6,
+        "category": "Baby",
+        "img": "",
+        "title": "Niñera",
+        "person": "Ada Tyler",
+        "score": "2.5"
+    },
+    {
+        "id": 7,
+        "category": "Baby",
+        "img": "",
+        "title": "Niñera",
+        "person": "Ada Tyler",
+        "score": "2.5"
+    },
+    {
+        "id": 8,
+        "category": "Baby",
+        "img": "",
+        "title": "Niñera",
+        "person": "Ada Tyler",
+        "score": "2.5"
+    },
+    {
+        "id": 9,
+        "category": "Baby",
+        "img": "/assets/yoga.jpg",
+        "title": "Niñera",
+        "person": "Ada Tyler",
+        "score": "2.5"
+    }
+]
