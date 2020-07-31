@@ -23,7 +23,7 @@ const App = () => {
         <Route exact path="/" component={Onboard}/>
         <Route exact path="/home" component={Home}/>
         <Route exact path="/signup" component={SignUp}/>
-        <Route exact path="/detail" component={Detail}/>
+        <Route path="/detail/:id" component={Detail}/>
       </Router>
     </ThemeProvider>
   );

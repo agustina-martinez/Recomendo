@@ -1,6 +1,6 @@
 import styled, {css} from 'styled-components';
 
-export const MainContainer = styled.div(({theme, picture}) => {
+export const MainContainer = styled.div(({theme}) => {
     return css`
         display: flex;
         flex-direction: column;
@@ -20,6 +20,49 @@ export const MainContainer = styled.div(({theme, picture}) => {
     `;
 });
 
+export const TopContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    height: 8%;
+`;
+
+export const BottomContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+`;
+
+export const ScoreContainer = styled.div(({theme}) => {
+    return css`
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background-color: ${theme.colors.white};
+        width: 4rem;
+        border-radius: 5px;
+    `;
+});
+
+export const User = styled.label`
+    font-weight: 600;
+`;
+
+export const Image = styled.img`
+    border-radius: 10px;
+    width: 90%;
+    height: auto;
+    align-self: center;
+`;
+
+export const Title = styled.h3`
+    text-align: center;
+    cursor: pointer;
+`;
+
 export const CategoryContainer = styled.div`
     width: 96%;
     display: flex;
@@ -37,41 +80,3 @@ export const Category = styled.div(({theme}) => {
         align-items: center;
     `;
 });
-
-export const Image = styled.img`
-    border-radius: 10px;
-    width: 90%;
-    height: auto;
-    align-self: center;
-`;
-
-export const Title = styled.h3(({theme}) => {
-    return css`
-        cursor: pointer;
-    `;
-});
-
-export const BottomContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-`;
-
-export const ScoreContainer = styled.div(({theme}) => {
-    return css`
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        background-color: ${theme.colors.white};
-        width: 3rem;
-        border-radius: 5px;
-    `;
-});
-
-export const Score = styled.div(({theme}) => {
-    return css`
-    `;
-});
-
-/* height: ${picture ? '25rem' : '10rem'}; */

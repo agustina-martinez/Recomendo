@@ -1,16 +1,46 @@
-import React, {useEffect} from 'react';
-import {useParams} from 'react-router-dom';
-import {StyledHomeContainer} from './Home.styles';
+import React, {useState, useEffect} from 'react';
 import MainLayout from '../../layout/MainLayout/MainLayout.layout';
-import CardContainer from '../../components/CardsContainer/CardContainer.component';
+import Card from '../../components/Card/Card.component';
+import {getFetchData} from '../../services/Images.services';
+import {StyledHomeContainer, CardContainer, Grid, Column} from './Home.styles';
+//import Masonry from 'react-masonry-css';
 
 const Home = () => {
-  const {id} = useParams();
+
+  const [images, setImages] = useState([]);
+
+  const getData = async () => {
+      getFetchData().then(res => {
+          setImages(...images, res);
+      });
+  }
+
+  useEffect(() => {
+      getData();
+  }, []);
+
+  console.log(images);
+
+  const cards = images.map(img => (
+    <Card 
+      link={`/detail/${img.id}`}
+      linkStyle={{textDecoration: 'none', color:'#000'}}
+      category="random"
+      src={img.urls.regular ? img.urls.regular : "/assets/withoutimage.png"}
+      key={img.id}
+      alt={img.alt_description}
+      title={img.alt_description}
+      user={img.user.name}
+      score="5.0"
+    />
+  ));
 
   return (
     <StyledHomeContainer>
       <MainLayout>
-        <CardContainer/>
+        <CardContainer>
+          {cards}
+        </CardContainer>
       </MainLayout>
     </StyledHomeContainer>
   );
@@ -18,32 +48,22 @@ const Home = () => {
 
 export default Home;
 
-
 /*
-import Navbar from '../../components/Navbar/Navbar.component';
-import CategoriesCard from '../../components/CategoriesCard/CategoriesCard.component';
-import TitlePage from '../../components/TitlePage/TitlePage.component';
-import Logo from '../../components/Logo/Logo.component';
 
-<div>
-  <Logo/>
-</div>
-<div style={{ display: 'flex', justifyContent: 'space-between' }}>
-  <TitlePage name="Recomendados"/>
-  <div style={{ paddingTop: 12 }}>
-    <Navbar/>
-  </div>
-</div>
-<div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 30}}>
-  <div style={{ display: 'flex'}}>
-    <CategoriesCard name="Nuevos"/>
-    <CategoriesCard name="Destacados"/>
-    <CategoriesCard name="Popular"/>
-    <CategoriesCard name="Tendencia"/>
-    <CategoriesCard name="En oferta"/>
-  </div>
-  <div>
-    <input style={{ border: '2px solid #345DEE', borderRadius: 8, height: 40, width: 268, outline: 'none', fontSize: 24 }} />
-  </div>
-</div>
+const breakpointsColumns = {
+    default: 4,
+    1200: 3,
+    992: 3,
+    768: 2,
+    576: 1
+  }
+
+<Masonry
+            breakpointsColumns={breakpointsColumns}
+            className={<Grid/>}
+            columnClassName={<Column/>}
+            >
+              {cards}
+            </Masonry>
+
 */
