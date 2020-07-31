@@ -5,11 +5,18 @@ export const MainContainer = styled.div(({theme, picture}) => {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        width: 24%;
+        height: auto;
+        margin: 0.5rem 0;
         border-radius: 10px;
         background-color: ${theme.colors.points.grey};
         font-family: ${theme.typography.fonts.primary};
-        width: 100%;
-        height: 100%;
+        transition: 0.2s;
+        &:hover{
+            transition: 0.2s;
+            transform: scale(1.1);
+            box-shadow: 0 0 12px 0 var(--color-shadow);
+        }
     `;
 });
 
@@ -34,12 +41,13 @@ export const Category = styled.div(({theme}) => {
 export const Image = styled.img`
     border-radius: 10px;
     width: 90%;
-    height: 80%;
+    height: auto;
     align-self: center;
 `;
 
 export const Title = styled.h3(({theme}) => {
     return css`
+        cursor: pointer;
     `;
 });
 

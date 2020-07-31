@@ -4,24 +4,22 @@ export const StyledLogoContainer = styled.div(({ theme }) => {
   return css`
     display: flex;
     font-family: ${theme.typography.fonts.primary};
-    font-size: 27px;
-    line-weight: 2.963px;
-  `
-})
+    font-size: 1.7rem;
+  `;
+});
 
-export const StyledRLogo = styled.p(({ theme }) => {
+export const StyledRLogo = styled.span(({ theme }) => {
   return css`
-    font-weight: 700;
+    font-weight: bold;
     color: ${theme.colors.primary.base};
-  `
-})
+  `;
+});
 
-export const StyledEcomenndoLogo = styled.p(({ theme }) => {
+export const StyledEcomenndoLogo = styled.p(({ theme, size }) => {
   return css`
-    letter-spacing: -3px;
+    letter-spacing: -2.4px;
     font-weight: 600;
     color: ${theme.colors.primary['dark-80']};
-    position: relative;
-    left: -3px;
-  `
-})
+    font-size: ${size};
+  `;
+});

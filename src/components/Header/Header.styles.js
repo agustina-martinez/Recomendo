@@ -12,8 +12,18 @@ export const HeaderStyle = styled.div(({theme}) => {
     `
 });
 
+export const LogoContainer = styled.div`
+    display: flex;
+    align-items: center;
+`;
+
+export const StarLogo = styled.img`
+    width: 4rem;
+    height: 4rem;
+`;
+
 export const HeaderH1 = styled.h1`
-    font-weight: bold;
+    font-weight: 500;
     font-size: 4.2rem;
     letter-spacing: -3px;
     color: #18214D;
@@ -21,6 +31,7 @@ export const HeaderH1 = styled.h1`
 
 export const HeaderH1Span = styled.span`
     color: #5D58E9;
+    font-weight: 600;
 `;
 
 export const HeaderH3 = styled.h3`

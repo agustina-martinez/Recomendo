@@ -1,34 +1,52 @@
-import React from 'react';
-import cards from '../../mocks/CardMock.json';
+import React, {useState, useEffect} from 'react';
+// import images from '../../mocks/CardMock.json';
 import BookmarkIcon from '@material-ui/icons/Bookmark';
 import StarIcon from '@material-ui/icons/Star';
-import {MainContainer,
-        CategoryContainer,
-        Category,
-        Image,
-        Title,
-        BottomContainer,
-        ScoreContainer,
-        Score
-    } from './Card.styles';
+import {Link} from 'react-router-dom';
+import {getFetchData} from '../../services/Images.services';
+import {
+    MainContainer,
+    CategoryContainer,
+    Category,
+    Image,
+    Title,
+    BottomContainer,
+    ScoreContainer,
+    Score
+} from './Card.styles';
 
 const Card = () => {
+
+    const [images, setImages] = useState([]);
+
+    const getData = async () => {
+        getFetchData().then(res => {
+            setImages(...images, res);
+        });
+    }
+
+    useEffect(() => {
+        getData();
+    }, []);
+
+    console.log(images);
+
     return (
         <React.Fragment>
-            {cards.map(card => {
+            {images.map(img => {
                 return(
                     <MainContainer>
                         <CategoryContainer>
-                            <Category>{card.category}</Category>
+                            <Category>random</Category>
                             <BookmarkIcon/>
                         </CategoryContainer>
-                        <Image src={card.img} alt={card.title}/>
-                        <Title>{card.title}</Title>
+                        <Image src={img.urls.regular ? img.urls.regular : "/assets/withoutimage.png"} key={img.id} alt={img.alt_description}/>
+                        <Link to="/detail" style={{textDecoration: 'none', color:'#000'}}><Title>{img.alt_description}</Title></Link>
                         <BottomContainer>
-                            <label>{card.person}</label>
+                            <label>{img.user.name}</label>
                             <ScoreContainer>
                                 <StarIcon style={{width: '1rem'}}/>
-                                <Score>{card.score}</Score>
+                                <Score>5.0</Score>
                             </ScoreContainer>
                         </BottomContainer>
                     </MainContainer>

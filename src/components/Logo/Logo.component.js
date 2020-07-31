@@ -4,10 +4,10 @@ import { StyledLogoContainer, StyledRLogo, StyledEcomenndoLogo } from './Logo.st
 const Logo = () => {
   return (
     <StyledLogoContainer>
-      <StyledRLogo>R</StyledRLogo>
-      <StyledEcomenndoLogo>ecomendo</StyledEcomenndoLogo>
+      <img src="assets/starlogo.png" alt="star logo"/>
+      <StyledEcomenndoLogo size="1.7rem"><StyledRLogo>R</StyledRLogo>ecomendo</StyledEcomenndoLogo>
     </StyledLogoContainer>
-  )
+  );
 }
 
-export default Logo
+export default Logo;

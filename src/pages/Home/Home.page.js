@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import {useParams} from 'react-router-dom';
 import {StyledHomeContainer} from './Home.styles';
 import MainLayout from '../../layout/MainLayout/MainLayout.layout';
 import CardContainer from '../../components/CardsContainer/CardContainer.component';
 
 const Home = () => {
+  const {id} = useParams();
+
   return (
     <StyledHomeContainer>
       <MainLayout>

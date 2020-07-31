@@ -35,7 +35,7 @@ const Form = ({margin}) => {
                     <input type="checkbox"></input>
                     <TermsP>By creating an account, you agree to the Terms and Conditions and Privacy Policy</TermsP>
                 </TermsContainer>
-                    <Link to="/home" style={{width:'100%', textDecoration: 'none'}}><Button buttonTittle="Crear una cuenta" width="100%" height="3rem" letterSpacing="-0.5px"/></Link>
+                    <Link to="/home" style={{width:'100%', textDecoration: 'none'}}><Button buttonTittle="Crear" width="100%" height="3rem" letterSpacing="-0.5px"/></Link>
                     <SignupP>Or sign up with</SignupP>
                 <IconsContainer/>
             </NoInputContainer>

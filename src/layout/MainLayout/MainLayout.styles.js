@@ -6,7 +6,7 @@ export const MainLayoutContainer = styled.section`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 0.5rem auto;
 `;
 
 export const MainLayoutHeader = styled.header`
