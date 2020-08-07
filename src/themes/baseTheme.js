@@ -1,5 +1,7 @@
 const colors = {
   black: '#000',
+  grey: '#5B5E6B',
+  white: '#FFF',
   points: {
     blue: '#18214D',
     grey: '#EFF2F6'
@@ -23,8 +25,7 @@ const colors = {
     base: '#EEBB0B',
     'dark-80': '#D93D1A',
     'light-20': '#E65427',
-  },
-  white: '#FFF',
+  }
 };
 
 const typography = {

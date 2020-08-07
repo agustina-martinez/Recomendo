@@ -1,14 +1,14 @@
 import styled, {css} from 'styled-components';
 
 export const View = styled.div`
-    width: 80%;
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 80%;
 `;
 
 export const InputStyle = styled.input(({theme}) => {
-    return css `
+    return css`
         z-index: 10;
         background-color: ${theme.colors.points.grey};
         border-radius: 8px;

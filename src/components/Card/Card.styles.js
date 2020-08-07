@@ -5,9 +5,10 @@ export const MainContainer = styled.div(({theme}) => {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 24%;
+        width: 20%;
         height: auto;
         margin: 0.5rem 0;
+        padding: 0.5rem;
         border-radius: 10px;
         background-color: ${theme.colors.points.grey};
         font-family: ${theme.typography.fonts.primary};
@@ -25,7 +26,7 @@ export const TopContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem;
-    height: 8%;
+    height: 10%;
 `;
 
 export const BottomContainer = styled.div`
@@ -64,19 +65,8 @@ export const Title = styled.h3`
 `;
 
 export const CategoryContainer = styled.div`
-    width: 96%;
+    width: auto;
     display: flex;
     justify-content: space-between;
-    padding: 0 0.5rem;
+    padding: 0.5rem;
 `;
-
-export const Category = styled.div(({theme}) => {
-    return css`
-        background-color: ${theme.colors.primary.base};
-        border-radius: 5px;
-        padding: 0 0.8rem;
-        color: ${theme.colors.white};
-        display: flex;
-        align-items: center;
-    `;
-});

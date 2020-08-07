@@ -6,7 +6,7 @@ import {
 } from './InputSearch.styles';
 
 const InputSearch = () => {
-  return (
+  return(
     <StyledSearchInputContainer>
       <StyledInputSearch/>
       <StyledInputSearchIcon/>

@@ -32,6 +32,7 @@ const Home = () => {
       title={img.alt_description}
       user={img.user.name}
       score="5.0"
+      colorBackground="white"
     />
   ));
 

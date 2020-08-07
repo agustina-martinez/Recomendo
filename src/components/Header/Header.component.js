@@ -15,7 +15,7 @@ import {
 } from './Header.styles';
 
 const Header = () => {
-    return (
+    return(
         <HeaderStyle>
             <LogoContainer>
                 <StarLogo src="assets/starlogo.png" alt="star logo"/>

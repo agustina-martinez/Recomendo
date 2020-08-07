@@ -6,12 +6,12 @@ export const StyledHomeContainer = styled.div`
 `;
 
 export const CardContainer = styled.div`
-    margin-top: 1rem;
+    margin-top: 2rem;
     width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
     justify-content: space-between;
 `;
 

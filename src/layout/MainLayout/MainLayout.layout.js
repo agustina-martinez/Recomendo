@@ -1,6 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {
+  Logo,
+  Navbar,
+  CategoriesCard,
+  InputSearch,
+  TitlePage
+} from '../../components';
+import {
   MainLayoutContainer,
   MainLayoutHeader,
   TopContainer,
@@ -9,15 +16,8 @@ import {
   DecorativeIcon,
   CategoriesContainer,
 } from './MainLayout.styles';
-import {
-  Logo,
-  Navbar,
-  CategoriesCard,
-  InputSearch,
-  TitlePage
-} from '../../components';
 
-const MainLayout = ({ children }) => {
+const MainLayout = ({children}) => {
   return (
     <MainLayoutContainer>
       <MainLayoutHeader>
@@ -25,8 +25,8 @@ const MainLayout = ({ children }) => {
           <Link to="/home" style={{textDecoration: 'none'}}><Logo/></Link>
         </TopContainer>
         <MiddleContainer>
-          <TitlePage name="Recomendados"/>
-          <div style={{marginTop: 12}}><Navbar /></div>
+          <TitlePage name="Novedades"/>
+          <div style={{marginTop: 12}}><Navbar/></div>
         </MiddleContainer>
         <BottomContainer>
           <div style={{display: 'flex', alignItems: 'flex-start'}}>
@@ -40,7 +40,7 @@ const MainLayout = ({ children }) => {
               </CategoriesContainer>
             </div>
           </div>
-            <InputSearch/>
+            <InputSearch width="5rem"/>
         </BottomContainer>
       </MainLayoutHeader>
       {children}

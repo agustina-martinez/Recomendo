@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, {css} from 'styled-components';
 
 export const MainLayoutContainer = styled.section`
   width: 100%;
@@ -16,7 +16,6 @@ export const MainLayoutHeader = styled.header`
 `;
 
 export const TopContainer = styled.div`
-  
 `;
 
 export const MiddleContainer = styled.div`
@@ -27,7 +26,8 @@ export const MiddleContainer = styled.div`
 export const BottomContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 28px;
+  align-items: center;
+  margin-top: 1rem;
 `;
 
 export const DecorativeIcon = styled.div(({ theme }) => {

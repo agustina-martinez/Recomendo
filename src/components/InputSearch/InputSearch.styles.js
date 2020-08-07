@@ -5,20 +5,21 @@ export const StyledSearchInputContainer = styled.div`
   position: relative;
   display: flex;
   align-items: center;
+  width: 40%;
 `;
 
-export const StyledInputSearch = styled.input(({ theme }) => {
+export const StyledInputSearch = styled.input(({theme}) => {
   return css`
     outline: none;
     border: 2px solid ${theme.colors.secondary.base};
     border-radius: 8px;
     height: 40px;
-    width: 268px;
+    width: 100%;
     font-size: 24px;
   `;
 });
 
-export const StyledInputSearchIcon = styled(Search)(({ theme }) => {
+export const StyledInputSearchIcon = styled(Search)(({theme}) => {
   return css`
     position: absolute;
     right: 10px;

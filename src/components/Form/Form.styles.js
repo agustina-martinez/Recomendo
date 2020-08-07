@@ -41,9 +41,12 @@ export const TitleTwo = styled.p(({theme}) => {
 });
 
 export const InputContainer = styled.div`
-    width: 80%;
+    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
+    margin: 2rem 0;
 `;
 
 export const NoInputContainer = styled.div`
