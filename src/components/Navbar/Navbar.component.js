@@ -1,43 +1,37 @@
-import React, {useState} from 'react';
-import {useHistory} from 'react-router-dom';
+import React, {useContext} from 'react';
+import AppContext from '../../context/App';
 import {
   StyledNavbarContainer,
   StyledUl,
-  StyledLi,
-  StyledLink
+  TheLink
 } from './Navbar.styles';
 
-const Navbar = ({ active = false}) => {
+const Navbar = () => {
 
-  // const [keyActive, setKeyActive] = useState(null);
-  // const auxArray = [0, 1, 2, 3];
+  const [keyActive, setKeyActive] = useContext(AppContext);
 
-  // const history = useHistory();
+  const navItems = [
+      {name: 'Recomendados', to: '/home'},
+      {name: 'Favoritos', to: '/favoritos'},
+      {name: 'Recomendar', to: '/recomendar'},
+      {name: 'Perfil', to: '/perfil'}
+  ]
 
-  // const handleNavItem = (url) => history(url)
-
-  // const navItems = [
-  //     {name: 'Recomendados', to: '/recomendos'},
-  //     {name: 'Recomendados', to: '/recomendos'},
-  //     {name: 'Recomendados', to: '/recomendos'},
-  //     {name: 'Recomendados', to: '/recomendos'},
-  // ]
-
-  return (
+  return(
     <StyledNavbarContainer>
       <StyledUl>
-        <StyledLi active={true}>
-          <StyledLink>Recomendados</StyledLink>
-        </StyledLi>
-        <StyledLi active={active}>
-          <StyledLink>Favoritos</StyledLink>
-        </StyledLi>
-        <StyledLi active={active}>
-          <StyledLink>Recomendar</StyledLink>
-        </StyledLi>
-        <StyledLi active={active}>
-          <StyledLink>Perfil</StyledLink>
-        </StyledLi>
+        {
+          navItems.map(i => (
+            <TheLink
+              to={i.to}
+              key={i}
+              active={keyActive === i.name ? true : false}
+              onClick={() => keyActive === i.name ? setKeyActive(null) : setKeyActive(i.name)}
+            >
+              {i.name}
+            </TheLink>
+          ))
+        }
       </StyledUl>
     </StyledNavbarContainer>
   );

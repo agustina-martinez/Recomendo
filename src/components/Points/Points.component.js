@@ -10,7 +10,6 @@ const Points = () => {
             {
                 auxArray.map(i => (
                     <OnboardEachPoint
-                        // onClick={() => handleNavItem(to)}
                         active={keyActive === i ? true : false}
                         key={i}
                         onClick={() => keyActive === i ? setKeyActive(null) : setKeyActive(i)}

@@ -19,8 +19,5 @@ export const OnboardEachPoint = styled.button(({theme, active}) => {
         cursor: pointer;
         outline: none;
         background-color: ${active ? theme.colors.points.blue : theme.colors.points.grey};
-        &:active{
-            background-color: ${theme.colors.points.blue};
-        }
     `;
 });

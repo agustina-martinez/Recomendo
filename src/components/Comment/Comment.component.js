@@ -1,7 +1,7 @@
 import React from 'react';
+import Like from '../LikeButton/LikeButton.component';
+import Unlike from '../UnlikeButton/UnlikeButton.component';
 import ProfilePicture from '../ProfilePicture/ProfilePicture.component';
-import ThumbUpIcon from '@material-ui/icons/ThumbUp';
-import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 import {
     CommentContainer,
     MainContainer,
@@ -15,6 +15,7 @@ import {
 } from './Comment.styles';
 
 const Comment = ({name, date, comment}) => {
+
     return(
         <CommentContainer>
             <ProfilePicture
@@ -31,8 +32,8 @@ const Comment = ({name, date, comment}) => {
                     <CommentP>{comment}</CommentP>
                 </FirstContainer>
                 <Likes>
-                    <ThumbUpIcon style={{color: 'grey', cursor: 'pointer', width: '1.2rem'}}/>
-                    <ThumbDownIcon style={{color: 'grey', cursor: 'pointer', width: '1.2rem'}}/>
+                    <Like/>
+                    <Unlike/>
                     <LikesDescription>Reply</LikesDescription>
                 </Likes>
             </MainContainer>
