@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import {
   Logo,
+  Menu,
   Navbar,
   CategoriesCard,
   InputSearch,
@@ -15,10 +16,25 @@ import {
   BottomContainer,
   DecorativeIcon,
   CategoriesContainer,
+  TheMenu
 } from './MainLayout.styles';
 
 const MainLayout = ({children}) => {
-  return (
+
+  const [menuVisible, setMenuVisible] = useState(false);
+  const [buttonActive, setButtonActive] = useState(false);
+
+  const toggleMenu = () => {
+    if(!buttonActive){
+      setButtonActive(true);
+      setMenuVisible(true);
+    } else {
+      setButtonActive(false);
+      setMenuVisible(false);
+    }
+  }
+
+  return(
     <MainLayoutContainer>
       <MainLayoutHeader>
         <TopContainer>
@@ -28,20 +44,26 @@ const MainLayout = ({children}) => {
           <TitlePage name="Novedades"/>
           <div style={{marginTop: 12}}><Navbar/></div>
         </MiddleContainer>
-        <BottomContainer>
-          <div style={{display: 'flex', alignItems: 'flex-start'}}>
-            <div style={{display: 'flex', alignItems: 'center'}}>
-              <DecorativeIcon><div/><div/><div/></DecorativeIcon>
-              <CategoriesContainer>
-                <CategoriesCard name="Nuevos"/>
-                <CategoriesCard name="Destacados"/>
-                <CategoriesCard name="Populares"/>
-                <CategoriesCard name="Tendencia"/>
-              </CategoriesContainer>
-            </div>
-          </div>
-            <InputSearch width="5rem"/>
-        </BottomContainer>
+        <div>
+          <BottomContainer>
+              <div style={{display: 'flex', alignItems: 'center'}}>
+                <DecorativeIcon
+                  active={buttonActive}
+                  onClick={toggleMenu}
+                >
+                  <div/><div/><div/>
+                </DecorativeIcon>
+                <CategoriesContainer>
+                  <CategoriesCard name="Nuevos"/>
+                  <CategoriesCard name="Destacados"/>
+                  <CategoriesCard name="Populares"/>
+                  <CategoriesCard name="Tendencia"/>
+                </CategoriesContainer>
+              </div>
+              <InputSearch width="5rem"/>
+          </BottomContainer>
+          <TheMenu menuVisible={menuVisible}/>
+        </div>
       </MainLayoutHeader>
       {children}
     </MainLayoutContainer>

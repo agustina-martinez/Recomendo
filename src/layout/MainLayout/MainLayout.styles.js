@@ -1,4 +1,5 @@
 import styled, {css} from 'styled-components';
+import Menu from '../../components/Menu/Menu.component';
 
 export const MainLayoutContainer = styled.section`
   width: 100%;
@@ -30,25 +31,43 @@ export const BottomContainer = styled.div`
   margin-top: 1rem;
 `;
 
-export const DecorativeIcon = styled.div(({ theme }) => {
+export const DecorativeIcon = styled.button(({theme, active}) => {
   return css`
     margin-left: 5px;
-    width: 23px;
-    height: 20px;
+    width: 1.6rem;
+    height: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border:none;
+    outline: none;
+    background-color: ${theme.colors.white};
+    border-radius: 10px;
     cursor: pointer;
+    &:hover > div{
+      background-color: ${theme.colors.primary.dark3};
+    }
     > div {
       height: 5px;
       background-color: ${theme.colors.primary.base};
-      &:nth-child(2) {
-        width: 13px;
+
+      &:first-child{
+        width: 100%;
       }
-      &:last-child {
-        width: 7px;
+      &:nth-child(2){
+        width: 70%;
+      }
+      &:last-child{
+        width: 40%;
       }
     }
+  `;
+});
+
+export const TheMenu = styled(Menu)(({menuVisible}) => {
+  return css`
+    background-color: ${menuVisible ? 'red' : 'green'};
+    transition: .8s;
   `;
 });
 
