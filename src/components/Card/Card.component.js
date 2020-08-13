@@ -7,13 +7,14 @@ import {
     MainContainer,
     TopContainer,
     CategoryContainer,
+    LinkImg,
     Image,
     Title,
     BottomContainer,
     User
 } from './Card.styles';
 
-const Card = ({link, linkStyle, category, src, key, alt, title, user, width, height, score, colorBackground}) => {
+const Card = ({imgLink, link, linkStyle, category, src, key, alt, title, user, width, height, score, colorBackground}) => {
     return (
         <MainContainer style={{width: width, height: height}}>
             <TopContainer>
@@ -23,7 +24,7 @@ const Card = ({link, linkStyle, category, src, key, alt, title, user, width, hei
                 </BottomContainer>
                 <BookmarkIcon style={{fontSize: '2rem', color: '#5D58E9'}}/>
             </TopContainer>
-            <Image src={src} key={key} alt={alt}/>
+            <LinkImg to={imgLink}><Image src={src} key={key} alt={alt}/></LinkImg>
             <Link to={link} style={linkStyle}><Title>{title}</Title></Link>
             <CategoryContainer>
                 <Category category={category}/>

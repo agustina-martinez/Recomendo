@@ -2,6 +2,7 @@ const colors = {
   black: '#000',
   grey: '#5B5E6B',
   ['dark-grey']: '#1C1C1C',
+  ['light-grey']: '#E4E4E4',
   white: '#FFF',
   points: {
     blue: '#18214D',
@@ -9,11 +10,11 @@ const colors = {
   },
   primary: {
     base: '#5D58E9',
-    'dark-60': '#2521A0',
-    'dark-80': '#18214D',
+    ['dark-60']: '#2521A0',
+    ['dark-80']: '#18214D',
     dark3: '#3E4462',
-    'light-40': '#AAA7F2',
-    'light-50': '#ACAAED',
+    ['light-40']: '#AAA7F2',
+    ['light-50']: '#ACAAED',
     light3: '#345DEE'
   },
   secondary: {

@@ -1,4 +1,5 @@
 import styled, {css} from 'styled-components';
+import {Link} from 'react-router-dom';
 
 export const MainContainer = styled.div(({theme}) => {
     return css`
@@ -51,12 +52,18 @@ export const User = styled.label`
     font-weight: 600;
 `;
 
+export const LinkImg = styled(Link)(() => {
+    return css`
+        margin: 1rem 0;
+        width: 90%;
+        align-self: center;
+    `;
+})
+
 export const Image = styled.img`
     border-radius: 10px;
-    width: 90%;
+    width: 100%;
     height: auto;
-    align-self: center;
-    margin: 1rem 0;
 `;
 
 export const Title = styled.h4`

@@ -20,7 +20,8 @@ const Home = () => {
   }, []);
 
   const cards = images.map(img => (
-    <Card 
+    <Card
+      imgLink={`/detail/${img.id}`}
       link={`/detail/${img.id}`}
       linkStyle={{textDecoration: 'none', color:'#000'}}
       category="random"

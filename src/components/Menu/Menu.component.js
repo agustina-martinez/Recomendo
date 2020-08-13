@@ -1,4 +1,6 @@
 import React from 'react';
+import Button from '../Button/Button.component';
+
 import {
     MenuContainer,
     FirstContainer,
@@ -6,7 +8,16 @@ import {
     CategoryContainer,
     StyledH3,
     Category,
-    SecondContainer
+    SecondContainer,
+    RaitingContainer,
+    StatusContainer,
+    StyledP,
+    AllStarsContainer,
+    AllStatusContainer,
+    StyledDiv,
+    StarContainer,
+    StyledLabel,
+    TheButton
 } from './Menu.styles';
 
 const Menu = ({menuVisible}) => {
@@ -47,7 +58,50 @@ const Menu = ({menuVisible}) => {
                 </StyledUl>
             </FirstContainer>
             <SecondContainer>
-                hola
+                <RaitingContainer>
+                    <StyledP>Raiting</StyledP>
+                    <AllStarsContainer>
+                        <StarContainer>
+                            <input type="checkbox"/>
+                            <StyledLabel>estrellas</StyledLabel>
+                        </StarContainer>
+                        <StarContainer>
+                            <input type="checkbox"/>
+                            <StyledLabel>estrellas</StyledLabel>
+                        </StarContainer>
+                        <StarContainer>
+                            <input type="checkbox"/>
+                            <StyledLabel>estrellas</StyledLabel>
+                        </StarContainer>
+                        <StarContainer>
+                            <input type="checkbox"/>
+                            <StyledLabel>estrellas</StyledLabel>
+                        </StarContainer>
+                    </AllStarsContainer>
+                </RaitingContainer>
+                <StatusContainer>
+                    <StyledP>Estado</StyledP>
+                    <AllStatusContainer>
+                        <StyledDiv>
+                            <input type="radio" id="all" name="status"/>
+                            <StyledLabel for="all">Mostrar todos</StyledLabel>
+                        </StyledDiv>
+                        <StyledDiv>
+                            <input type="radio" id="new" name="status"/>
+                            <StyledLabel for="new">Nuevo</StyledLabel>
+                        </StyledDiv>
+                        <StyledDiv>
+                            <input type="radio" id="used" name="status"/>
+                            <StyledLabel for="used">Usado</StyledLabel>
+                        </StyledDiv>
+                    </AllStatusContainer>
+                    <Button
+                        buttonTittle="Aplicar"
+                        height="1.8rem"
+                        width="7rem"
+                        letterSpacing="0"
+                    />
+                </StatusContainer>
             </SecondContainer>
         </MenuContainer>
     );

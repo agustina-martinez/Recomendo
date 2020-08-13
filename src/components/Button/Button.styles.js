@@ -18,7 +18,10 @@ export const ButtonStyled = styled.button(({theme}) => {
         font-size: 1.2rem;
         letter-spacing: 0.1rem;
         outline: none;
-        cursor: pointer;
+        &:hover{
+            cursor: pointer;
+            background-color: ${theme.colors.primary['dark-60']};
+        }
     `;
 });
 
