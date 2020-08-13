@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import MainLayout from '../../layout/MainLayout/MainLayout.layout';
 import Card from '../../components/Card/Card.component';
+import TheMasonry from '../../components/Masonry/Masonry.component';
 import {getFetchData} from '../../services/Images.services';
-import {StyledHomeContainer, CardContainer, Grid, Column} from './Home.styles';
-//import Masonry from 'react-masonry-css';
+import {StyledHomeContainer, CardContainer} from './Home.styles';
 
 const Home = () => {
 
@@ -18,8 +18,6 @@ const Home = () => {
   useEffect(() => {
       getData();
   }, []);
-
-  console.log(images);
 
   const cards = images.map(img => (
     <Card 
@@ -36,12 +34,14 @@ const Home = () => {
     />
   ));
 
+  console.log(typeof cards)
+
   return (
     <StyledHomeContainer>
       <MainLayout>
-        <CardContainer>
-          {cards}
-        </CardContainer>
+          <TheMasonry>
+            {cards}
+          </TheMasonry>
       </MainLayout>
     </StyledHomeContainer>
   );

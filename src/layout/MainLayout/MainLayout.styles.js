@@ -1,5 +1,4 @@
 import styled, {css} from 'styled-components';
-import Menu from '../../components/Menu/Menu.component';
 
 export const MainLayoutContainer = styled.section`
   width: 100%;
@@ -7,7 +6,7 @@ export const MainLayoutContainer = styled.section`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  margin: 0.5rem auto;
+  margin: auto;
 `;
 
 export const MainLayoutHeader = styled.header`
@@ -17,18 +16,28 @@ export const MainLayoutHeader = styled.header`
 `;
 
 export const TopContainer = styled.div`
+  background-color: white;
+  padding: 0.5rem 0;
+  position: relative;
+  z-index: 50;
 `;
 
 export const MiddleContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  background-color: white;
+  position: relative;
+  z-index: 50;
 `;
 
 export const BottomContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1rem;
+  background-color: white;
+  padding: 1rem 0;
+  position: relative;
+  z-index: 50;
 `;
 
 export const DecorativeIcon = styled.button(({theme, active}) => {
@@ -61,13 +70,6 @@ export const DecorativeIcon = styled.button(({theme, active}) => {
         width: 40%;
       }
     }
-  `;
-});
-
-export const TheMenu = styled(Menu)(({menuVisible}) => {
-  return css`
-    background-color: ${menuVisible ? 'red' : 'green'};
-    transition: .8s;
   `;
 });
 

@@ -1,6 +1,7 @@
 const colors = {
   black: '#000',
   grey: '#5B5E6B',
+  ['dark-grey']: '#1C1C1C',
   white: '#FFF',
   points: {
     blue: '#18214D',

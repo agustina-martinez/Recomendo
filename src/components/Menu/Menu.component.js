@@ -1,7 +1,15 @@
 import React from 'react';
-import {MenuContainer, StyledUl, CategoryContainer, Category} from './Menu.styles';
+import {
+    MenuContainer,
+    FirstContainer,
+    StyledUl,
+    CategoryContainer,
+    StyledH3,
+    Category,
+    SecondContainer
+} from './Menu.styles';
 
-const Menu = () => {
+const Menu = ({menuVisible}) => {
 
     const categoryItems = [
         {name: 'Seleccionar todos'},
@@ -23,18 +31,24 @@ const Menu = () => {
     ]
 
     return(
-        <MenuContainer>
-            <StyledUl>
-                {
-                    categoryItems.map(i => (
-                        <CategoryContainer>
-                            <Category>{i.name}</Category>
-                            <input type="checkbox"/>
-                        </CategoryContainer>
-                    ))
-                }
-                
-            </StyledUl>
+        <MenuContainer menuVisible={menuVisible}>
+            <FirstContainer>
+                <StyledH3>Categoría</StyledH3>
+                <StyledUl>
+                    {
+                        categoryItems.map(i => (
+                            <CategoryContainer>
+                                <Category htmlFor={i.name}>{i.name}</Category>
+                                <input type="checkbox" name={i.name} id={i.name}/>
+                            </CategoryContainer>
+                        ))
+                    }
+                    
+                </StyledUl>
+            </FirstContainer>
+            <SecondContainer>
+                hola
+            </SecondContainer>
         </MenuContainer>
     );
 }

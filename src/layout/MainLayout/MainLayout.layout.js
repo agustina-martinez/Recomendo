@@ -15,24 +15,14 @@ import {
   MiddleContainer,
   BottomContainer,
   DecorativeIcon,
-  CategoriesContainer,
-  TheMenu
+  CategoriesContainer
 } from './MainLayout.styles';
 
 const MainLayout = ({children}) => {
 
   const [menuVisible, setMenuVisible] = useState(false);
-  const [buttonActive, setButtonActive] = useState(false);
 
-  const toggleMenu = () => {
-    if(!buttonActive){
-      setButtonActive(true);
-      setMenuVisible(true);
-    } else {
-      setButtonActive(false);
-      setMenuVisible(false);
-    }
-  }
+  const toggleMenu = () => setMenuVisible(!menuVisible);
 
   return(
     <MainLayoutContainer>
@@ -48,7 +38,6 @@ const MainLayout = ({children}) => {
           <BottomContainer>
               <div style={{display: 'flex', alignItems: 'center'}}>
                 <DecorativeIcon
-                  active={buttonActive}
                   onClick={toggleMenu}
                 >
                   <div/><div/><div/>
@@ -62,7 +51,7 @@ const MainLayout = ({children}) => {
               </div>
               <InputSearch width="5rem"/>
           </BottomContainer>
-          <TheMenu menuVisible={menuVisible}/>
+          <Menu menuVisible={menuVisible}/>
         </div>
       </MainLayoutHeader>
       {children}

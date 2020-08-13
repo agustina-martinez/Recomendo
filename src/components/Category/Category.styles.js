@@ -6,7 +6,9 @@ export const Categ = styled.div(({theme}) => {
         border-radius: 5px;
         padding: 0 0.5rem;
         color: ${theme.colors.white};
-        font-size: 1rem;
+        font-size: 0.8rem;
         width: auto;
+        display: flex;
+        align-items: center;
     `;
 });

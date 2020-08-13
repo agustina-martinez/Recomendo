@@ -5,7 +5,6 @@ export const MainContainer = styled.div(({theme}) => {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 20%;
         height: auto;
         margin: 0.5rem 0;
         padding: 0.5rem;
@@ -57,10 +56,12 @@ export const Image = styled.img`
     width: 90%;
     height: auto;
     align-self: center;
+    margin: 1rem 0;
 `;
 
-export const Title = styled.h3`
+export const Title = styled.h4`
     text-align: center;
+    margin-bottom: 1rem;
     cursor: pointer;
 `;
 
