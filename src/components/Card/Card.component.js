@@ -14,22 +14,27 @@ import {
     User
 } from './Card.styles';
 
-const Card = ({imgLink, link, linkStyle, category, src, key, alt, title, user, width, height, score, colorBackground}) => {
+const Card = (props) => {
     return (
-        <MainContainer style={{width: width, height: height}}>
+        <MainContainer
+            style={{
+                width: props.width,
+                height: props.height
+            }}
+        >
             <TopContainer>
                 <BottomContainer>
-                    <Score score={score} colorBackground={colorBackground}/>
-                    <User>{user}</User>
+                    <Score score={props.score} colorBackground={props.colorBackground}/>
+                    <User>{props.user}</User>
                 </BottomContainer>
                 <BookmarkIcon style={{fontSize: '2rem', color: '#5D58E9'}}/>
             </TopContainer>
-            <LinkImg to={imgLink}><Image src={src} key={key} alt={alt}/></LinkImg>
-            <Link to={link} style={linkStyle}><Title>{title}</Title></Link>
+            <LinkImg to={props.imgLink}><Image src={props.src} key={props.key} alt={props.alt}/></LinkImg>
+            <Link to={props.link} style={props.linkStyle}><Title>{props.title}</Title></Link>
             <CategoryContainer>
-                <Category category={category}/>
-                <Category category={category}/>
-                <Category category={category}/>
+                <Category category={props.category}/>
+                <Category category={props.category}/>
+                <Category category={props.category}/>
             </CategoryContainer>
         </MainContainer>
     );

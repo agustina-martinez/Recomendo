@@ -84,15 +84,15 @@ const Menu = ({menuVisible}) => {
                     <AllStatusContainer>
                         <StyledDiv>
                             <input type="radio" id="all" name="status"/>
-                            <StyledLabel for="all">Mostrar todos</StyledLabel>
+                            <StyledLabel htmlFor="all">Mostrar todos</StyledLabel>
                         </StyledDiv>
                         <StyledDiv>
                             <input type="radio" id="new" name="status"/>
-                            <StyledLabel for="new">Nuevo</StyledLabel>
+                            <StyledLabel htmlFor="new">Nuevo</StyledLabel>
                         </StyledDiv>
                         <StyledDiv>
                             <input type="radio" id="used" name="status"/>
-                            <StyledLabel for="used">Usado</StyledLabel>
+                            <StyledLabel htmlFor="used">Usado</StyledLabel>
                         </StyledDiv>
                     </AllStatusContainer>
                     <Button

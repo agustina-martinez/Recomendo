@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import MainLayout from '../../layout/MainLayout/MainLayout.layout';
 import Card from '../../components/Card/Card.component';
-import TheMasonry from '../../components/Masonry/Masonry.component';
+import MasonryLayout from '../../components/Masonry/Masonry.component';
 import {getFetchData} from '../../services/Images.services';
-import {StyledHomeContainer, CardContainer} from './Home.styles';
+import {StyledHomeContainer} from './Home.styles';
 
 const Home = () => {
 
@@ -35,37 +35,15 @@ const Home = () => {
     />
   ));
 
-  console.log(typeof cards)
-
   return (
     <StyledHomeContainer>
       <MainLayout>
-          <TheMasonry>
+          <MasonryLayout>
             {cards}
-          </TheMasonry>
+          </MasonryLayout>
       </MainLayout>
     </StyledHomeContainer>
   );
 }
 
 export default Home;
-
-/*
-
-const breakpointsColumns = {
-    default: 4,
-    1200: 3,
-    992: 3,
-    768: 2,
-    576: 1
-  }
-
-<Masonry
-            breakpointsColumns={breakpointsColumns}
-            className={<Grid/>}
-            columnClassName={<Column/>}
-            >
-              {cards}
-            </Masonry>
-
-*/

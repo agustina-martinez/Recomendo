@@ -30,8 +30,6 @@ const Detail = () => {
         setImages(data);
     }
 
-    console.log(images);
-
     useEffect(() => {
         getData();
     }, []);
@@ -71,7 +69,7 @@ const Detail = () => {
                     <Box2>
                         <Card 
                             width="98%"
-                            height="20rem"
+                            height="auto"
                             linkStyle={{textDecoration: 'none', color:'#000'}}
                             category="random"
                             src={ "/assets/withoutimage.png"}

@@ -1,10 +1,11 @@
 import React from 'react';
 import Header from '../../components/Header/Header.component';
 import Points from '../../components/Points/Points.component';
-import {OnboardStyle,
-        OnboardContainer,
-        OnboardImgPhone
-    } from './Onboard.styles';
+import {
+    OnboardStyle,
+    OnboardContainer,
+    OnboardImgPhone
+} from './Onboard.styles';
 
 const Onboard = () => {
 

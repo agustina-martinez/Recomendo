@@ -1,21 +1,8 @@
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
 
 export const StyledHomeContainer = styled.div`
     max-width: 90%;
     margin: 0 auto;
-`;
-
-export const CardContainer = styled.div`
-    margin-top: 2rem;
-    width: 100%;
-    min-height: 100vh;
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 0 16px; */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; 
-    justify-content: space-between;
 `;
 
 export const Grid = styled.div`

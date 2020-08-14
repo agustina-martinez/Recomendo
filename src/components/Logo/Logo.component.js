@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledLogoContainer, StyledRLogo, StyledEcomenndoLogo } from './Logo.styles'
+import {StyledLogoContainer, StyledRLogo, StyledEcomenndoLogo} from './Logo.styles'
 
 const Logo = () => {
   return (

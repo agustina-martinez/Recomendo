@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from '../Button/Button.component';
-import Logo from '../Logo/Logo.component';
 import IconsContainer from '../IconsContainer/Icons.component';
 import {Link} from 'react-router-dom';
 import AddCircleIcon from '@material-ui/icons/AddCircle';

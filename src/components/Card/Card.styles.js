@@ -16,7 +16,6 @@ export const MainContainer = styled.div(({theme}) => {
         &:hover{
             transition: 0.2s;
             transform: scale(1.1);
-            box-shadow: 0 0 12px 0 var(--color-shadow);
         }
     `;
 });
@@ -56,6 +55,7 @@ export const LinkImg = styled(Link)(() => {
     return css`
         margin: 1rem 0;
         width: 90%;
+        height: auto;
         align-self: center;
     `;
 })
