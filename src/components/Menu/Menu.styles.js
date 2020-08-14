@@ -8,17 +8,18 @@ export const MenuContainer = styled.div`
     -moz-box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.50);
     box-shadow:0px 6px 8px rgba(0, 0, 0, 0.123252);
     min-height: 18rem;
-    width: 90%;
+    width: 100%;
     transform: ${({menuVisible}) => menuVisible ? 'translateY(0)' : 'translateY(-200%)'};
     transition: .8s;
     position: absolute;
     z-index: 10;
+    left: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 `;
 
 export const FirstContainer = styled.div`
-    width: 80%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -67,12 +68,12 @@ export const Category = styled.p(({theme}) => {
 });
 
 export const SecondContainer = styled.div`
-    width: 20%;
     text-align: center;
     margin-right: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    width: 20%;
 `;
 
 export const RaitingContainer = styled.div`

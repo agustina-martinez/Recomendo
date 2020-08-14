@@ -2,8 +2,6 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import Input from '../Input/Input.component';
 import Button from '../Button/Button.component';
-import IconsContainer from '../IconsContainer/Icons.component';
-import PersonIcon from '@material-ui/icons/Person';
 import EmailIcon from '@material-ui/icons/Email';
 import LockIcon from '@material-ui/icons/Lock';
 import {FormStyle,
@@ -13,15 +11,14 @@ import {FormStyle,
         InputContainer,
         NoInputContainer,
         TermsContainer,
-        TermsP,
-        SignupP
+        TermsP
     } from './Form.styles';
 
 const Form = ({margin}) => {
     return (
         <FormStyle style={{margin: margin}}>
             <TitlesFormContainer>
-                <TitleOne>¡Bienvenido!</TitleOne>
+                <TitleOne>¡Hola!</TitleOne>
                 <Link to="/home" style={{'text-decoration': 'none'}}>
                     <TitleTwo>Iniciar sesión</TitleTwo>
                 </Link>
