@@ -11,10 +11,10 @@ const Navbar = () => {
   const [keyActive, setKeyActive] = useContext(AppContext);
 
   const navItems = [
-      {name: 'Recomendados', to: '/home'},
-      {name: 'Favoritos', to: '/favoritos'},
-      {name: 'Recomendar', to: '/recomendar'},
-      {name: 'Perfil', to: '/perfil'}
+    {name: 'Recomendados', to: '/home'},
+    {name: 'Favoritos', to: '/favoritos'},
+    {name: 'Recomendar', to: '/recomendar'},
+    {name: 'Perfil', to: '/perfil'}
   ]
 
   return(
