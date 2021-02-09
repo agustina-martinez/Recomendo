@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../Button/Button.component';
+import StarRatings from 'react-star-ratings'
 
 import {
     MenuContainer,
@@ -50,7 +51,7 @@ const Menu = ({menuVisible}) => {
                         categoryItems.map(i => (
                             <CategoryContainer>
                                 <Category htmlFor={i.name}>{i.name}</Category>
-                                <input type="checkbox" name={i.name} id={i.name}/>
+                                {/* <input type="checkbox" name={i.name} id={i.name}/> */}
                             </CategoryContainer>
                         ))
                     }
@@ -62,20 +63,44 @@ const Menu = ({menuVisible}) => {
                     <StyledP>Raiting</StyledP>
                     <AllStarsContainer>
                         <StarContainer>
-                            <input type="checkbox"/>
-                            <StyledLabel>estrellas</StyledLabel>
+                            <StarRatings
+                                rating={4}
+                                starRatedColor="blue"
+                                numberOfStars={4}
+                                name='rating'
+                                starDimension="25px"
+                                starSpacing="5px"
+                            />
                         </StarContainer>
                         <StarContainer>
-                            <input type="checkbox"/>
-                            <StyledLabel>estrellas</StyledLabel>
+                            <StarRatings
+                                rating={3}
+                                starRatedColor="blue"
+                                numberOfStars={4}
+                                name='rating'
+                                starDimension="25px"
+                                starSpacing="5px"
+                            />
                         </StarContainer>
                         <StarContainer>
-                            <input type="checkbox"/>
-                            <StyledLabel>estrellas</StyledLabel>
+                            <StarRatings
+                                rating={2}
+                                starRatedColor="blue"
+                                numberOfStars={4}
+                                name='rating'
+                                starDimension="25px"
+                                starSpacing="5px"
+                            />
                         </StarContainer>
                         <StarContainer>
-                            <input type="checkbox"/>
-                            <StyledLabel>estrellas</StyledLabel>
+                            <StarRatings
+                                rating={1}
+                                starRatedColor="blue"
+                                numberOfStars={4}
+                                name='rating'
+                                starDimension="25px"
+                                starSpacing="5px"
+                            />
                         </StarContainer>
                     </AllStarsContainer>
                 </RaitingContainer>
